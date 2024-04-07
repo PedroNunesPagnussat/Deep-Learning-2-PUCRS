@@ -19,35 +19,42 @@ que nos permite fazer [esse](https://levelup.gitconnected.com/killer-combo-softm
 que nos permite simplificar algumas contas no back propagation
 
 
-<img src="./imgs/softmax-example.png" alt="Softmax formula" style="height: 512px; width:512px;"/>
+<img src="./imgs/softmax-example.png" alt="Softmax formula" style="height: 512px; width:512px" class="center">
 
 
 # LogSoftmax
 
-### Definição
 
 `LogSoftmax` é uma operação que combina as funções Softmax e logaritmo natural em uma única etapa. O objetivo principal dessa função é converter logits de um modelo em log-probabilidades. Isso é particularmente útil para melhorar a estabilidade numérica e a eficiência computacional em determinadas operações.
 
-### Formula
 
-A `LogSoftmax` não é nada mais complexo que `Log(Softmax(x))` porem podemos utilizar propriedades logaritmas para simplificar essas formula, usando a propriedade do quociente.
-
-\log_b \left( \frac{x}{y} \right) = \log_b(x) - \log_b(y)
+A `LogSoftmax` não é nada mais complexo que $\text{LogSoftmax}(x_i) = \log\left(\frac{e^{x_i}}{\sum_{j}e^{x_j}}\right)
+$ porem podemos utilizar propriedades logaritmas para simplificar essas formula, usando a propriedade do quociente, $\log_b \left( \frac{x}{y} \right) = \log_b(x) - \log_b(y)$ podemos simplificar a formula para $\text{LogSoftmax}(x_i) = x_i - \log\left(\sum_{j}e^{x_j}\right)$.
 
 
+Vantegens
+- *Estabilidade Numérica:* Ao trabalhar diretamente com log-probabilidades, evitam-se problemas de underflow e overflow. 
+- *Eficiência Computacional:* Combinar as operações de Softmax e log em uma única função permite otimizar os cálculos, reduzindo a quantidade de trabalho computacional necessário. Isso é mais eficiente do que calcular a Softmax e, em seguida, aplicar o logaritmo aos resultados.
+- *Prevenção de Erros Numéricos em Modelos Complexos:* Em modelos de deep learning particularmente complexos ou profundos, pequenos erros numéricos podem se acumular ao longo das camadas. Usar LogSoftmax ajuda a prevenir esses acúmulos, contribuindo para a estabilidade geral do treinamento.
+- *Modelagem de Sequências:* No PLN, a LogSoftmax é frequentemente usada em modelos de linguagem e outras tarefas de sequência, onde a eficiência e a estabilidade numérica são críticas devido ao grande tamanho do vocabulário e à complexidade dos modelos.
 
 
-### forma de usar
-### vantegens
-### aplicações
+LogSoftmax é amplamente utilizada em tarefas que envolvem classificação e modelagem de linguagem. Por exemplo, em redes neurais recorrentes (RNNs) e modelos de atenção. Em resumo a LogSoftmax transforma os scores brutos dos modelos em valores que podem ser interpretados de forma probabilística, ao mesmo tempo em que oferece vantagens numéricas e computacionais significativas.
 
 # Softmax2D 
 
-### Definição
-### Formula
-### forma de usar
-### vantegens
-### aplicações
+A Softmax2D pode ser entendida como uma extensão da operação de Softmax. Enquanto a Softmax padrão é aplicada a vetores, a Softmax2D é projetada para operar em tensores com duas dimensões significativas. Isso a torna particularmente útil em contextos onde as entradas são imagens ou mapas de características em redes neurais convolucionais
+
+
+Vantagens
+*Trabalho com Estruturas Bidimensionais:* A principal vantagem da Softmax2D é sua habilidade de trabalhar diretamente com dados que são naturalmente bidimensionais, preservando a estrutura espacial dos dados.
+
+
+Considerações ao utilizar Softmax2D, é crucial considerar o impacto computacional, especialmente em matrizes muito grandes, onde a normalização pode se tornar um gargalo se não for otimizada adequadamente.
+
+Em resumo, a Softmax2D estende os princípios da Softmax para domínios onde as entradas são bidimensionais, oferecendo uma ferramenta a normalização de dados em aplicações de visão computacional, processamento de imagens e análise espacial, mantendo a coesão e significância das estruturas bidimensionais nos dados.
+
+
 
 # Conclusão
 
@@ -58,4 +65,6 @@ referencias:
 
 https://mriquestions.com/softmax.html
 https://pytorch.org/docs/stable/generated/torch.nn.LogSoftmax.html
+https://stackoverflow.com/questions/61567597/how-is-log-softmax-implemented-to-compute-its-value-and-gradient-with-better
 https://youtu.be/8nm0G-1uJzA?si=tpA4XBsojZciALCB
+https://medium.com/@AbhiramiVS/softmax-vs-logsoftmax-eb94254445a2
