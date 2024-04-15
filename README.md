@@ -248,4 +248,4 @@ Stack Overflow. "How is log-softmax implemented to compute its value and gradien
 
 DeepLizard. "Softmax Function - Clearly Explained with Examples | Deep Learning Basics." YouTube, uploaded by DeepLizard, date not specified. Available online: https://youtu.be/8nm0G-1uJzA?si=tpA4XBsojZciALCB.
 
-S, Abhirami. "Softmax vs LogSoftmax." Medium, date not specified. Available online: https://medium.com/@AbhiramiVS/softmax-vs-logsoftmax-eb94254445a2.
+S, Abhirami. "Softmax vs LogSoftmax." Medium. Available online: https://medium.com/@AbhiramiVS/softmax-vs-logsoftmax-eb94254445a2.
