@@ -240,12 +240,12 @@ Soma das probabilidades:
 
 referencias:
 
-Morgan, P.S. "Softmax." MRI Questions. Available online: https://mriquestions.com/softmax.html (accessed on April 15, 2024).
+Morgan, P.S. "Softmax." MRI Questions. Available online: https://mriquestions.com/softmax.html.
 
-PyTorch. "torch.nn.LogSoftmax." PyTorch Documentation. Available online: https://pytorch.org/docs/stable/generated/torch.nn.LogSoftmax.html (accessed on April 15, 2024).
+PyTorch. "torch.nn.LogSoftmax." PyTorch Documentation. Available online: https://pytorch.org/docs/stable/generated/torch.nn.LogSoftmax.html.
 
-Stack Overflow. "How is log-softmax implemented to compute its value and gradient with better numerical stability?" Stack Overflow, May 3, 2020. Available online: https://stackoverflow.com/questions/61567597/how-is-log-softmax-implemented-to-compute-its-value-and-gradient-with-better (accessed on April 15, 2024).
+Stack Overflow. "How is log-softmax implemented to compute its value and gradient with better numerical stability?" Stack Overflow, May 3, 2020. Available online: https://stackoverflow.com/questions/61567597/how-is-log-softmax-implemented-to-compute-its-value-and-gradient-with-better.
 
-DeepLizard. "Softmax Function - Clearly Explained with Examples | Deep Learning Basics." YouTube, uploaded by DeepLizard, date not specified. Available online: https://youtu.be/8nm0G-1uJzA?si=tpA4XBsojZciALCB (accessed on April 15, 2024).
+DeepLizard. "Softmax Function - Clearly Explained with Examples | Deep Learning Basics." YouTube, uploaded by DeepLizard, date not specified. Available online: https://youtu.be/8nm0G-1uJzA?si=tpA4XBsojZciALCB.
 
-S, Abhirami. "Softmax vs LogSoftmax." Medium, date not specified. Available online: https://medium.com/@AbhiramiVS/softmax-vs-logsoftmax-eb94254445a2 (accessed on April 15, 2024).
+S, Abhirami. "Softmax vs LogSoftmax." Medium, date not specified. Available online: https://medium.com/@AbhiramiVS/softmax-vs-logsoftmax-eb94254445a2.
