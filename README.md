@@ -40,7 +40,7 @@ $$
 L = - \sum_{c=1}^{M} y_c z_c + \log \left(\sum_{j=1}^{M} e^{z_j}\right)
 $$
 
-Isso nos da uma vantagem onde podemos simplificar o gradiente para $\frac{\partial L}{\partial z_i} = \hat{y}_i - y_i$ Esta forma do gradiente significa que a atualização dos pesos durante o backpropagation é proporcional à diferença entre a probabilidade prevista e o verdadeiro rótulo
+Isso nos da uma vantagem onde podemos simplificar o gradiente para $$\frac{\partial L}{\partial z_i} = \hat{y}_i - y_i$$ Esta forma do gradiente significa que a atualização dos pesos durante o backpropagation é proporcional à diferença entre a probabilidade prevista e o verdadeiro rótulo
 
 # LogSoftmax
 
